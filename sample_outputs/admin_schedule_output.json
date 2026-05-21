@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "agent": "schedule_agent",
+  "request_id": "req_1779358591",
+  "original_request": "30 min with a London investor next week, Tuesday morning ideal",
+  "parsed_request": {
+    "duration_min": 30,
+    "topic": "Meeting with investor",
+    "scope": "External",
+    "attendees": [
+      {
+        "name": "London investor",
+        "timezone": "Europe/London",
+        "role": "external"
+      }
+    ],
+    "day_preference": "Tuesday",
+    "time_preference": "morning",
+    "week_offset": 1,
+    "is_fellow_meeting": false,
+    "assumptions": [
+      "The meeting is about discussing potential investment opportunities."
+    ]
+  },
+  "proposed_slots": [
+    {
+      "start_time_doha": "2026-05-26T09:30:00+03:00",
+      "end_time_doha": "2026-05-26T10:00:00+03:00",
+      "duration_min": 30,
+      "attendee_local_times": {
+        "Europe/London": "2026-05-26T07:30:00+01:00"
+      },
+      "status": "clean",
+      "conflicts": [],
+      "rationale": "Tuesday 09:30-10:00 Doha; no conflicts with recurring meetings; matches 'morning' preference."
+    },
+    {
+      "start_time_doha": "2026-05-26T10:00:00+03:00",
+      "end_time_doha": "2026-05-26T10:30:00+03:00",
+      "duration_min": 30,
+      "attendee_local_times": {
+        "Europe/London": "2026-05-26T08:00:00+01:00"
+      },
+      "status": "clean",
+      "conflicts": [],
+      "rationale": "Tuesday 10:00-10:30 Doha; no conflicts with recurring meetings; matches 'morning' preference."
+    },
+    {
+      "start_time_doha": "2026-05-26T10:30:00+03:00",
+      "end_time_doha": "2026-05-26T11:00:00+03:00",
+      "duration_min": 30,
+      "attendee_local_times": {
+        "Europe/London": "2026-05-26T08:30:00+01:00"
+      },
+      "status": "clean",
+      "conflicts": [],
+      "rationale": "Tuesday 10:30-11:00 Doha; no conflicts with recurring meetings; matches 'morning' preference."
+    }
+  ],
+  "selected_recommended_slot": {
+    "start_time_doha": "2026-05-26T09:30:00+03:00",
+    "end_time_doha": "2026-05-26T10:00:00+03:00",
+    "duration_min": 30,
+    "attendee_local_times": {
+      "Europe/London": "2026-05-26T07:30:00+01:00"
+    },
+    "status": "clean",
+    "conflicts": [],
+    "rationale": "Tuesday 09:30-10:00 Doha; no conflicts with recurring meetings; matches 'morning' preference."
+  },
+  "calendar_invite_draft": {
+    "title": "[Meeting with investor] \u00b7 [External]",
+    "body": "Purpose: Meeting with investor\n\nGranola link (if recorded): https://granola.ai/utopia-studio/auto-recorded",
+    "purpose": "Meeting with investor",
+    "human_readable": "Title: [Meeting with investor] \u00b7 [External]\n\nDoha time:  Tuesday 26 May 2026, 09:30 - 10:00 (Asia/Qatar, UTC+3)\nAttendee local times:\n  - London investor (Europe/London): Tue 26 May 2026, 07:30 local\n\nPurpose: Meeting with investor\n\nAttendees:\n  - London investor (external)\n\nBody:\nPurpose: Meeting with investor\n\nGranola link (if recorded): https://granola.ai/utopia-studio/auto-recorded\n\nGranola: https://granola.ai/utopia-studio/auto-recorded  (placeholder - replace with real link if recorded)\n",
+    "attendees": [
+      {
+        "name": "London investor",
+        "timezone": "Europe/London",
+        "role": "external",
+        "local_time": "2026-05-26T07:30:00+01:00"
+      }
+    ],
+    "granola_link": "https://granola.ai/utopia-studio/auto-recorded"
+  },
+  "ics_file_path": "sample_outputs/calendar_invite.ics",
+  "second_agent_handoff": {
+    "target_agent": "announcer",
+    "purpose": "draft Slack announcement to attendees",
+    "status": "ready_to_consume"
+  },
+  "status": "ready_to_send"
+}

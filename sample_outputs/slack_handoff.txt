@@ -1,0 +1,15 @@
+:calendar: *Proposed: [Meeting with investor] · [External]*
+
+*Doha time:* Tue 26 May, 09:30 (30 min)
+
+*Local times for attendees:*
+  - London investor (Europe/London): Tue 26 May, 07:30
+
+*Backup options if this doesn't work:*
+  - Tue 26 May, 10:00 Doha
+  - Tue 26 May, 10:30 Doha
+
+_Purpose:_ Meeting with investor
+_Granola link:_ https://granola.ai/utopia-studio/auto-recorded
+
+:white_check_mark: React :+1: to confirm or :calendar_spiral: to suggest another time.

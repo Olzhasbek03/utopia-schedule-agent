@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DESCRIPTION:Purpose: Meeting with investor\n\nGranola link (if recorded): https://granola.ai/utopia-studio/auto-recorded
+DTEND:20260526T070000Z
+DTSTART:20260526T063000Z
+SUMMARY:[Meeting with investor] · [External]
+UID:f294f814-061c-46fc-854d-bb69d67f8523@f294.org
+END:VEVENT
+END:VCALENDAR

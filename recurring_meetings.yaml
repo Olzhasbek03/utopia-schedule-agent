@@ -1,0 +1,67 @@
+# Knowledge base for the scheduling agent.
+#
+# ASSUMPTIONS:
+# The brief only specifies one exact time: QDB weekly = Monday 14:00 Doha.
+# All other meeting times below are EDITABLE DEFAULTS. The operator
+# (Founder's Associate) can adjust any line in this file directly
+# without touching any Python code. Items marked `assumed_default: true`
+# are my best-guess times; items marked `assumed_default: false` come
+# straight from the brief.
+#
+# All times are Doha local (Asia/Qatar, UTC+3, no DST).
+
+timezone: "Asia/Qatar"
+
+working_hours:
+  start: "09:00"
+  end: "18:00"
+
+# Brief: "Fellows are only available Mon-Wed."
+# Any meeting that includes a fellow must fall on Mon, Tue, or Wed.
+fellow_availability_days: ["Monday", "Tuesday", "Wednesday"]
+
+# The six recurring meetings the Founder's Associate runs every week.
+recurring_meetings:
+  - name: "Studio Directors planning"
+    day: "Monday"
+    start: "10:00"
+    duration_min: 60
+    assumed_default: true   # brief says "Monday" but not which hour
+
+  - name: "QDB weekly"
+    day: "Monday"
+    start: "14:00"
+    duration_min: 60
+    assumed_default: false  # brief explicitly says Monday 14:00 Doha
+
+  - name: "Studio Stand-up"
+    day: "daily"            # special case: runs Mon-Fri
+    start: "09:00"
+    duration_min: 30
+    assumed_default: true
+
+  - name: "PODS pipeline"
+    day: "Wednesday"
+    start: "11:00"
+    duration_min: 60
+    assumed_default: true
+
+  - name: "Directors week close"
+    day: "Friday"
+    start: "16:00"
+    duration_min: 60
+    assumed_default: true
+
+  - name: "Line management"
+    day: "Thursday"         # weekly, day not specified - parked on Thu
+    start: "15:00"          # to keep Mon-Wed open for fellow time
+    duration_min: 30
+    assumed_default: true
+
+# Invite convention from the brief:
+# title = [Topic] · [Studio/Fellow]
+# body = one-line purpose + Granola link if recorded
+invite_convention:
+  title_format: "[{topic}] · [{scope}]"
+  body_template: "Purpose: {purpose}\n\nGranola link (if recorded): {granola_link}"
+  default_granola_link: "https://granola.ai/utopia-studio/auto-recorded"

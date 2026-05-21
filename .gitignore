@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local agent outputs (the committed ones live in sample_outputs/)
+proposed_invite.ics
+out.json
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
